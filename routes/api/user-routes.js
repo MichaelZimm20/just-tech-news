@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Vote } = require('../../models');
+const { User, Post, Vote, Comment } = require('../../models');
 
 // GET /api/users
 // will select all the users from the user table in the database and send it back as JSON
@@ -26,6 +26,14 @@ router.get('/:id', (req,res) => {
             {
                 model: Post,
                 attributes: ['id','title', 'post_url', 'created_at']
+            },
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'created_at'],
+                include: {
+                  model: Post,
+                  attributes: ['title']
+                }
             },
             {
                 model: Post,
