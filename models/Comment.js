@@ -20,12 +20,11 @@ Comment.init(
         allowNull: false,
         // if allowNull is set to false, we can run our data through validators before creating the table
         validate: {
-            min: 1
+          len: [1]
         }
     },
     user_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         references: {
             model: 'user',
             key: 'id'
@@ -33,7 +32,6 @@ Comment.init(
     },
     post_id: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         references: {
             model: 'post',
             key: 'id'

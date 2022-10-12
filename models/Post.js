@@ -55,7 +55,7 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isUrl: true
+                isURL: true
             } 
         },
         user_id: {
