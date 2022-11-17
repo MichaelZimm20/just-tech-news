@@ -24,7 +24,7 @@
   * Don't forget to add express, require statements and const router = require('express').Router(); since "app" was primarily used in server.js
 
    ## Usage 
-  Used to a note taker for the end-user. 
+  
   * Firstly, open the terminal 
   * To acitvate the application start your sever with "npm start"
   * Then to run the application in web Browser use: http://localhost:3001/
